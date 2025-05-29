@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - RAXALVO</title>
+  <style>
+    body {
+      background: #000011;
+      color: #00ffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .signup-container {
+      background: rgba(10, 10, 30, 0.9);
+      padding: 2rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffff;
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #8a2be2;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      background: #001122;
+      color: #00ffff;
+    }
+    input::placeholder {
+      color: #00ccccaa;
+    }
+    button {
+      width: 100%;
+      background: #00ffff;
+      color: #000011;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #008b8b;
+      color: #fff;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 1rem;
+      color: #8a2be2;
+    }
+    .login-link a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <form action="/submit-signup" method="POST">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required />
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="login-link">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+  </div>
+</body>
+</html>
